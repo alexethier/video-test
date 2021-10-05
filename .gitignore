@@ -1,7 +1,3 @@
-# Custom
-env
-venv
-
 # Temporary and binary files
 *~
 *.py[cod]
