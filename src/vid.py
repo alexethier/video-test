@@ -4,6 +4,7 @@ import argparse
 import ffmpeg
 import sys
 import logging
+import os
 
 
 parser = argparse.ArgumentParser(
@@ -18,6 +19,17 @@ def test_eggs():
     LOGGER.warning('eggs warning')
     LOGGER.error('eggs error')
     LOGGER.critical('eggs critical')
+
+def run_process():
+    LOGGER.info("hi")
+    #cwd = os.getcwd()
+    #LOGGER.info("Scanning " + cwd + " for .mpeg file")
+    #for root, dir, files in os.walk(cwd):
+    #    LOGGER.info(root)
+    #    LOGGER.info("")
+    #    for items in fnmatch.filter(files, "*"):
+    #            LOGGER.info("..." + items)
+    #    LOGGER.info("")
 
 def read_frame_as_jpeg(in_filename, frame_num):
     out, err = (

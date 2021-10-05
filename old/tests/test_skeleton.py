@@ -2,6 +2,7 @@ import pytest
 import logging
 from video_test.skeleton import fib, main
 from video_test.vid import test_eggs
+from video_test.vid import run_process
 
 __author__ = "Alex Ethier"
 __copyright__ = "Alex Ethier"
@@ -11,6 +12,11 @@ LOGGER = logging.getLogger(__name__)
 
 def test_vid():
     test_eggs()
+    assert True
+
+def test_process():
+    run_process()
+    assert True
 
 def test_eggs():
     LOGGER.info('eggs info')
