@@ -1,11 +1,19 @@
 import pytest
-
+import logging
 from video_test.skeleton import fib, main
 
 __author__ = "Alex Ethier"
 __copyright__ = "Alex Ethier"
 __license__ = "MIT"
 
+LOGGER = logging.getLogger(__name__)
+
+def test_eggs():
+    LOGGER.info('eggs info')
+    LOGGER.warning('eggs warning')
+    LOGGER.error('eggs error')
+    LOGGER.critical('eggs critical')
+    assert True
 
 def test_fib():
     """API Tests"""
@@ -18,6 +26,9 @@ def test_fib():
 
 def test_main(capsys):
     """CLI Tests"""
+
+    print("Test Main")
+
     # capsys is a pytest fixture that allows asserts agains stdout/stderr
     # https://docs.pytest.org/en/stable/capture.html
     main(["7"])
