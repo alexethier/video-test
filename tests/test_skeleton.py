@@ -1,12 +1,16 @@
 import pytest
 import logging
 from video_test.skeleton import fib, main
+from video_test.vid import test_eggs
 
 __author__ = "Alex Ethier"
 __copyright__ = "Alex Ethier"
 __license__ = "MIT"
 
 LOGGER = logging.getLogger(__name__)
+
+def test_vid():
+    test_eggs()
 
 def test_eggs():
     LOGGER.info('eggs info')

@@ -1,3 +1,17 @@
+==============
+Run the Project
+===============
+
+# Test project
+$ tox
+
+# Doesn't work
+$ pytest -o log_cli=true
+
+===============
+END
+===============
+
 .. These are examples of badges you might want to add to your README:
    please update the URLs accordingly
 
